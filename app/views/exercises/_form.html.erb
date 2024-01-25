@@ -1,0 +1,40 @@
+<div class="card_form">
+  <%= form_with(model: exercise) do |form| %>
+    <% if exercise.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(exercise.errors.count, "error") %> prohibited this exercise from being saved:</h2>
+
+        <ul>
+          <% exercise.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div>
+      <%= form.label :name, style: "display: block" %>
+      <%= form.text_field :name, class: 'br' %>
+    </div>
+
+    <div>
+      <%= form.label :description, style: "display: block" %>
+      <%= form.text_area :description, class: 'br' %>
+    </div>
+
+    <div>
+      <%= form.label :sets, style: "display: block" %>
+      <%= form.number_field :sets, class: 'br' %>
+    </div>
+
+    <div>
+      <%= form.label :reps, style: "display: block" %>
+      <%= form.number_field :reps, class: 'br' %>
+    </div>
+
+    <div class="mt-3">
+      <%= button_to 'Create exercise', method: :post, class: 'button-submit' %>
+    </div>
+  <% end %>
+
+</div>

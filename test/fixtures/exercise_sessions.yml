@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  workout: one
+  exercise: one
+  completed_sets: 1
+  completed_reps: 1
+  weight: 1.5
+  duration: 1
+
+two:
+  workout: two
+  exercise: two
+  completed_sets: 1
+  completed_reps: 1
+  weight: 1.5
+  duration: 1

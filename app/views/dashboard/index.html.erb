@@ -1,0 +1,91 @@
+<div class="mt-5">
+  <div class="parent">
+    <div class="div1">
+      <h1 class="text-orange">Dashboard</h1>
+    </div>
+    <div class="div2 divcolor">
+      <h2>
+        Sessions
+      </h2>
+      <div>
+        <% if @last_workout %>
+          <h2>Último Treino</h2>
+          <p><strong>Data:</strong> <%= @last_workout.date %></p>
+
+          <% if @exercise_details %>
+            <h3>Detalhes dos Exercícios</h3>
+            <ul>
+              <% @exercise_details.each do |exercise| %>
+                <li><%= exercise.name %> - Sets: <%= exercise.sets %>, Reps: <%= exercise.reps %></li>
+              <% end %>
+            </ul>
+          <% end %>
+        <% else %>
+          <h6>Nenhum treino registrado ainda.</h6>
+        <% end %>
+      </div>
+    </div>
+    <div class="div3 divcolor">
+      <h2>
+        Exercises
+      </h2>
+      <div>
+        <% if @last_workout %>
+          <h2>Último Treino</h2>
+          <p><strong>Data:</strong> <%= @last_workout.date %></p>
+
+          <% if @exercise_details %>
+            <h3>Detalhes dos Exercícios</h3>
+            <ul>
+              <% @exercise_details.each do |exercise| %>
+                <li><%= exercise.name %> - Sets: <%= exercise.sets %>, Reps: <%= exercise.reps %></li>
+              <% end %>
+            </ul>
+          <% end %>
+        <% else %>
+          <h6>Nenhum treino registrado ainda.</h6>
+        <% end %>
+      </div>
+    </div>
+    <div class="div4 divcolor">
+      <h2>Workouts</h2>
+      <div>
+        <% if @last_workout %>
+          <h2>Último Treino</h2>
+          <p><strong>Data:</strong> <%= @last_workout.date %></p>
+
+          <% if @exercise_details %>
+            <h3>Detalhes dos Exercícios</h3>
+            <ul>
+              <% @exercise_details.each do |exercise| %>
+                <li><%= exercise.name %> - Sets: <%= exercise.sets %>, Reps: <%= exercise.reps %></li>
+              <% end %>
+            </ul>
+          <% end %>
+        <% else %>
+          <h6>Nenhum treino registrado ainda.</h6>
+        <% end %>
+      </div>
+    </div>
+    <div class="div5 divcolor">
+      <h2>Graphics</h2>
+      <div>
+        <% if @last_workout %>
+          <h2>Último Treino</h2>
+          <p><strong>Data:</strong> <%= @last_workout.date %></p>
+
+          <% if @exercise_details %>
+            <h3>Detalhes dos Exercícios</h3>
+            <ul>
+              <% @exercise_details.each do |exercise| %>
+                <li><%= exercise.name %> - Sets: <%= exercise.sets %>, Reps: <%= exercise.reps %></li>
+              <% end %>
+            </ul>
+          <% end %>
+        <% else %>
+          <h6>Nenhum treino registrado ainda.</h6>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

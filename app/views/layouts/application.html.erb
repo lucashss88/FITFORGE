@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FitForge</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload", media: "all" %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.example.com/bootstrap.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="bg-dark text-white">
+    <div class="navbar">
+      <div class="navbar-items-start">
+        <div>
+          <%= link_to "HOME", root_path, method: :get, class: "no-underline" %>
+        </div>
+        <div>
+          <%= link_to "EXERCISES", exercises_path, method: :get, class: "no-underline" %>
+        </div>
+        <div>
+          <%= link_to "WORKOUTS", workouts_path, method: :get, class: "no-underline" %>
+        </div>
+        <div>
+          <%= link_to "SESSIONS", exercise_sessions_path, method: :get, class: "no-underline" %>
+        </div>
+      </div>
+      <div class="navbar-items-end">
+        <div>
+          <%= link_to "USER", root_path, method: :get, class: "no-underline" %>
+        </div>
+        <div>
+          <%= link_to "EXIT", root_path, method: :get, class: "no-underline" %>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center">
+      <%= yield %>
+    </div>
+  </body>
+</html>

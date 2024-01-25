@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Exercise sessions</h1>
+
+<div id="exercise_sessions">
+  <% @exercise_sessions.each do |exercise_session| %>
+    <%= render exercise_session %>
+    <p>
+      <%= link_to "Show this exercise session", exercise_session, class: 'links-new' %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New exercise session", new_exercise_session_path, class: 'links-new' %>
